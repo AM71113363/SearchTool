@@ -13,7 +13,6 @@ HWND hSearch,hCaseSensitive,hGo;
 void CenterOnScreen(HWND hnd);
 void add(unsigned char *sms,unsigned char *after);
 
-
 HANDLE AT_WORK;  //event to start and stop
 BOOL I_AM_LOADING = FALSE; //flag for DragDrop
 
@@ -24,7 +23,6 @@ DWORD indexCount=0;          //line indexes length
 
 UCHAR dropped[MAX_PATH]; //url file to open,and later stores the string to search
 UCHAR temp[MAX_PATH];   //temp buffer for output
-
 
 static inline BOOL GetOut()
 {
@@ -38,7 +36,6 @@ void EnableItems(BOOL go,BOOL other)
     EnableWindow(hCaseSensitive,other);        //the checkbox                   
 }
 
-
 void LoadInitStuff()
 {
    _sleep(500); //wait,warmup
@@ -51,7 +48,6 @@ void LoadInitStuff()
    }
    ResetEvent(AT_WORK);
 }
-
 
 void BeginScan()
 {
@@ -113,7 +109,6 @@ void Reset()
    indexCount=0;
 }
 
-  
 void LoadTheFile()
 {
     DWORD result;
@@ -149,7 +144,6 @@ void LoadTheFile()
     I_AM_LOADING = FALSE;
 }
      
-
 LRESULT CALLBACK WindowProcedure (HWND hwnd, UINT message, WPARAM wParam, LPARAM lParam)
 {
     switch(message)
